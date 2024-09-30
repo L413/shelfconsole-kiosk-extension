@@ -1,10 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "Shelf Kiosk Lock",
+  "name": "Kiosk Lock",
   "version": "1.0",
-  "permissions": ["tabs", "storage"],
+  "permissions": ["tabs", "storage", "scripting"],
   "background": {
     "service_worker": "background.js"
+  },
+  "commands": {
+    "toggle-kiosk": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y" // Change this to your desired shortcut
+      },
+      "description": "Toggle Kiosk Mode"
+    }
   },
   "action": {
     "default_popup": "popup.html"
